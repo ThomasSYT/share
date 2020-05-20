@@ -1,0 +1,64 @@
+Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex.
+18:15:27-INFO: device: cuda n_gpu: 2, distributed training: False, 16-bits training: False
+18:15:28-INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /home/ha042/.pytorch_pretrained_bert/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+18:15:28-INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /home/ha042/.pytorch_pretrained_bert/distributed_-1/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+18:15:28-INFO: extracting archive file /home/ha042/.pytorch_pretrained_bert/distributed_-1/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /tmp/tmpkkb7l_c9
+18:15:32-INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+18:15:35-INFO: Weights of BertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+18:15:35-INFO: Weights from pretrained model not used in BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+18:15:39-INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at /home/ha042/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+18:15:39-INFO: extracting archive file /home/ha042/.pytorch_pretrained_bert/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /tmp/tmpjuw10aqk
+18:15:43-INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+18:15:46-INFO: ***** Running evaluation *****
+18:15:46-INFO:   Num examples = 539
+18:15:46-INFO:   Batch size = 32
+Evaluating: 100%|███████████████████████████████| 17/17 [00:02<00:00,  6.15it/s]
+18:15:48-INFO: ***** Eval results *****
+18:15:48-INFO:   Accuracy = 0.7031539888682746
+18:15:48-INFO:   eval_accuracy = 0.7031539888682746
+18:15:48-INFO:   eval_loss = 0.7602226488730487
+18:15:48-INFO:   global_step = 0
+18:15:48-INFO:   inference_time = 2.7438621520996094
+18:15:48-INFO:   loss = None
+0.7031539888682746
+
+Layer \textbackslash~Head & 1 & 2 & 3 & 4 \\
+1 & -0.00186 & -0.00186 & 0.00000 & 0.00371 & 0.00557 & 0.00186 & -0.00186 & 0.00371 & 0.00557 & 0.00371 & 0.00186 & 0.00000 \\
+2 & 0.00186 & 0.00742 & 0.00371 & 0.00000 & 0.00371 & 0.00186 & 0.00557 & 0.00371 & -0.00557 & 0.00371 & 0.00557 & 0.00742 \\
+3 & 0.00371 & 0.00000 & 0.00000 & 0.00000 & 0.00186 & 0.00186 & 0.00557 & 0.00186 & 0.00186 & 0.00000 & -0.00186 & 0.00186 \\
+4 & 0.00371 & 0.00557 & -0.00557 & -0.00371 & 0.00186 & 0.00000 & -0.00186 & 0.00000 & 0.00557 & 0.00186 & -0.00186 & 0.00371 \\
+5 & 0.00557 & 0.00186 & 0.00000 & 0.00000 & 0.00186 & 0.00186 & 0.00000 & 0.00000 & 0.00186 & -0.00557 & 0.00000 & -0.00371 \\
+6 & 0.00557 & 0.00000 & 0.00186 & -0.00371 & 0.00000 & 0.00557 & 0.00371 & 0.00371 & 0.00557 & -0.00371 & 0.00186 & 0.00000 \\
+7 & -0.00186 & 0.00186 & 0.00186 & 0.00186 & -0.00186 & 0.00371 & 0.00186 & 0.00000 & 0.00186 & -0.00557 & -0.00371 & -0.00186 \\
+8 & -0.00186 & 0.00000 & 0.00186 & -0.00371 & -0.00186 & 0.00000 & 0.00186 & 0.00186 & 0.00000 & -0.00186 & 0.00000 & 0.00186 \\
+9 & 0.00000 & 0.00186 & -0.00186 & 0.00000 & 0.00186 & 0.00186 & 0.00371 & 0.00371 & 0.00371 & -0.00186 & 0.00742 & 0.00186 \\
+10 & 0.00371 & 0.00557 & 0.00186 & 0.00186 & 0.00000 & 0.00186 & 0.00557 & 0.00371 & -0.00742 & -0.00186 & 0.00371 & 0.00371 \\
+11 & 0.00186 & 0.00371 & 0.00371 & 0.01113 & 0.00000 & 0.00000 & 0.00186 & 0.00186 & 0.00557 & 0.00186 & 0.01299 & 0.00186 \\
+12 & 0.00186 & 0.00000 & -0.00371 & 0.00186 & 0.00371 & 0.00742 & -0.00186 & 0.00000 & 0.00000 & 0.00371 & 0.00000 & 0.00186 \\
+
